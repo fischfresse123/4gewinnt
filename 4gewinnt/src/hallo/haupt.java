@@ -1,18 +1,13 @@
 package hallo;
 
-
-
 import javax.swing.JFrame;
 
 import javax.swing.JLabel;
 
-
-
 public class haupt {
 
-
-
 	public static void main(String[] args) {
+		System.out.println("sadfgaiosgfasfasfgaop");
 
 		System.out.println("Hallo die zweite");
 
@@ -36,15 +31,11 @@ public class haupt {
 
 	}
 
-
-
 	public static boolean abfrage(int z) {
 
 		for (int x = 0; x < 7; x++) {
 
 			for (int y = 0; y < 6; y++) {
-
-
 
 			}
 
@@ -54,10 +45,6 @@ public class haupt {
 
 		return hallo;
 
-		
-
 	}
-
-
 
 }
