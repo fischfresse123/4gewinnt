@@ -4,13 +4,20 @@ import java.awt.*;
 import javax.swing.*;
 
 public class Fenster extends JFrame {
+	
+	JFrame w;
+	
 	public Fenster() {
-		setTitle("VIER GEWINNT");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setSize(600, 400);
-
+		w = new JFrame();
+		w.setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("viergewinnt.png")));
+		w.setVisible(true);
+		w.setTitle("VIER GEWINNT");
+		w.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		w.setSize(800, 600);
+		
+		
 		JPanel menu = new JPanel();
-		add(menu);
+		w.add(menu);
 
 		JButton start = new JButton("Start Game");
 		start.setBackground(Color.BLUE);
@@ -28,6 +35,7 @@ public class Fenster extends JFrame {
 		exit.setFocusPainted(false);
 		exit.setFont(new Font("Tahoma", Font.BOLD, 12));
 		JLabel label = new JLabel();
+		
 		
 		label.setText("---");
 
