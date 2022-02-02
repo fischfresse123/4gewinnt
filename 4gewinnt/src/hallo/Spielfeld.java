@@ -1,22 +1,54 @@
 package hallo;
 
+
+import java.awt.*;
+import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.RenderingHints;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-import javax.swing.JLabel;
+import javax.swing.JPanel;
 
-public class Spielfeld extends JLabel {
+public class Spielfeld extends JPanel implements MouseListener {
 
-	private static final long serialVersionUID = 1L;
+    public Spielfeld() {
+        setBackground(Color.WHITE);
+        requestFocus();
+        addMouseListener(this);
 
-	protected void paintComponent(Graphics g) {
+    }
 
-		super.paintComponent(g);
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
 
-		Graphics2D g2d = (Graphics2D) g;
+        //eigene Zeichnungen
+        Graphics2D g2d = (Graphics2D) g;
 
-		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-	}
+        //Felder Zeichnen
+        for(Feld field : Test.instance.getFields()) {
+            field.draw(g2d);
+
+        }
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+
+    }
+
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+    }
+    @Override
+    public void mouseReleased(MouseEvent e) {
+    }
+    @Override
+    public void mouseEntered(MouseEvent e) {
+    }
+    @Override
+    public void mouseExited(MouseEvent e) {
+    }
 
 }
