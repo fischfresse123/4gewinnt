@@ -54,6 +54,7 @@ public class Controller implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == Start) {
 			w.dispose();
+			Spielfeld spielfeld = new Spielfeld();
 		} else if (e.getSource() == regeln) {
 			JOptionPane.showMessageDialog(null,
 					"Jeder Spieler besitzt 21 gleichfarbige Spielsteine. Wenn ein Spieler einen Spielstein in eine Spalte fallen lässt, \n besetzt dieser den untersten freien Platz der Spalte. \n Gewinner ist der Spieler, der es als erster schafft, vier oder mehr seiner \n Spielsteine waagerecht, senkrecht oder diagonal in eine Linie zu bringen. Das Spiel endet unentschieden, \n wenn das Spielbrett komplett gefüllt ist, ohne dass ein Spieler eine Viererlinie gebildet hat.",

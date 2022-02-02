@@ -15,6 +15,7 @@ public class Spielfeld extends JPanel implements MouseListener {
         setBackground(Color.WHITE);
         requestFocus();
         addMouseListener(this);
+        setVisible(true);
 
     }
 
@@ -26,7 +27,7 @@ public class Spielfeld extends JPanel implements MouseListener {
         Graphics2D g2d = (Graphics2D) g;
 
         //Felder Zeichnen
-        for(Feld field : Test.instance.getFields()) {
+        for(Feld field : haupt.instance.getFields()) {
             field.draw(g2d);
 
         }
