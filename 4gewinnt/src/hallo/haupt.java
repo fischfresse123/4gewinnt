@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class haupt {
 	private ArrayList<Feld> fields;
 	
-	public static haupt instance;
+	//public static haupt instance;
 
 	public static void main(String[] args) {
 		Controller menu = new Controller();
-		instance = new haupt();
+		//instance = new haupt();
 	}
 
 	public haupt() {

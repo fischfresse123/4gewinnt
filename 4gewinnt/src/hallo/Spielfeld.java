@@ -7,12 +7,35 @@ import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 public class Spielfeld extends JPanel implements MouseListener {
-
+	JButton eins = new JButton("1");
+	JButton zwei = new JButton("2");
+	JButton drei = new JButton("3");
+	JButton vier = new JButton("4");
+	JButton fünf = new JButton("5");
+	JButton sechs = new JButton("6");
+	JButton sieben = new JButton("7");
+	
+	
+	
     public Spielfeld() {
-        setBackground(Color.WHITE);
+    	add(eins);
+    	add(zwei);
+    	add(drei);
+    	add(vier);
+    	add(fünf);
+    	add(sechs);
+    	add(sieben);
+    	
+    	
+    	//eins.setbounds
+        
+    	
+    	
+    	setBackground(Color.WHITE);
         requestFocus();
         addMouseListener(this);
         setVisible(true);
@@ -27,7 +50,7 @@ public class Spielfeld extends JPanel implements MouseListener {
         Graphics2D g2d = (Graphics2D) g;
 
         //Felder Zeichnen
-        for(Feld field : haupt.instance.getFields()) {
+        for(Feld field : Controller.instance.getFields()) {
             field.draw(g2d);
 
         }

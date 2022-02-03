@@ -12,6 +12,9 @@ public class Controller implements ActionListener {
 	JButton regeln = new JButton("Regeln");
 	JButton exit = new JButton("Exit Game");
 	JFrame w = new JFrame();
+	
+	public static haupt instance;
+	
 	Controller() {
 		w.setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("viergewinnticon.png")));
 		w.setTitle("VIER GEWINNT");
@@ -23,7 +26,6 @@ public class Controller implements ActionListener {
 		JPanel menu = new JPanel();
 		w.add(menu);
 
-		
 		Start.setBackground(Color.BLUE);
 		Start.setForeground(Color.WHITE);
 		Start.setFocusPainted(false);
@@ -55,6 +57,7 @@ public class Controller implements ActionListener {
 		if (e.getSource() == Start) {
 			w.dispose();
 			Spielfeld spielfeld = new Spielfeld();
+			instance = new haupt();
 		} else if (e.getSource() == regeln) {
 			JOptionPane.showMessageDialog(null,
 					"Jeder Spieler besitzt 21 gleichfarbige Spielsteine. Wenn ein Spieler einen Spielstein in eine Spalte fallen lässt, \n besetzt dieser den untersten freien Platz der Spalte. \n Gewinner ist der Spieler, der es als erster schafft, vier oder mehr seiner \n Spielsteine waagerecht, senkrecht oder diagonal in eine Linie zu bringen. Das Spiel endet unentschieden, \n wenn das Spielbrett komplett gefüllt ist, ohne dass ein Spieler eine Viererlinie gebildet hat.",
