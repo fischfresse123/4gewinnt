@@ -5,8 +5,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
 
-
-
 public class Controller implements ActionListener {
 	JButton Start = new JButton("Start Game");
 	JButton regeln = new JButton("Regeln");
@@ -55,7 +53,6 @@ public class Controller implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == Start) {
-			w.dispose();
 			Spielfeld spielfeld = new Spielfeld();
 			instance = new haupt();
 		} else if (e.getSource() == regeln) {
