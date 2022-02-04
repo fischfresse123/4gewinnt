@@ -14,39 +14,42 @@ public class Controller implements ActionListener {
 	public static haupt instance;
 	
 	Controller() {
-		w.setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("viergewinnticon.png")));
-		w.setTitle("VIER GEWINNT");
-		w.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		w.setSize(800, 600);
-		w.setLocationRelativeTo(null);
-		w.setResizable(false);
+		//w.setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("viergewinnticon.png")));
+		w.setTitle("VIER GEWINNT"); // verändert den Titel des Fensters
+		w.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Wenn auf das rote Kreuz gedrückt wird, dann schließt sich das Fenster
+		w.setSize(800, 600); // Die Größe des Fensters wird auf 800x600 Pixel gesetzt
+		w.setLocationRelativeTo(null); // Wenn das Fenster geöffnet wird, erscheint es in der Mitte des Bildschirms
+		w.setResizable(false); // Man kann die Größe des Fensters nun nicht manuell ändern
 
-		JPanel menu = new JPanel();
-		w.add(menu);
+		JPanel menu = new JPanel(); // Ein neues JPanel wird erstellt, auf das dann die Buttons kommen
+		w.add(menu); // Das JPanel wird auf das Fenster hinzugefügt
 
-		Start.setBackground(Color.BLUE);
-		Start.setForeground(Color.WHITE);
-		Start.setFocusPainted(false);
-		Start.setFont(new Font("Tahoma", Font.BOLD, 12));
-		Start.addActionListener(this);
+		Start.setBackground(Color.BLUE); // Der Start-Button wird im Hintergrund blau
+		Start.setForeground(Color.WHITE); // Der Start-Button bekommt die Schriftfarbe weiß
+		Start.setFocusPainted(false); //
+		Start.setFont(new Font("Tahoma", Font.BOLD, 12)); // Die Schriftart wird Tahoma, die Schriftgröße 12 und der Text wird fett
+		Start.addActionListener(this); // Dies ist nötig, damit der ActionListener auf den Button zugreifen kann
 		
+		// Der Button Regeln erhält die gleichen Einstellungen wie der Button Start
 		regeln.setBackground(Color.BLUE);
 		regeln.setForeground(Color.WHITE);
 		regeln.setFocusPainted(false);
 		regeln.setFont(new Font("Tahoma", Font.BOLD, 12));
 		regeln.addActionListener(this);
 		
+		// Der Button Exit erhält die gleichen Einstellungen wie der Button Start
 		exit.setBackground(Color.BLUE);
 		exit.setForeground(Color.WHITE);
 		exit.setFocusPainted(false);
 		exit.setFont(new Font("Tahoma", Font.BOLD, 12));
 		exit.addActionListener(this);
 
+		// Die drei Buttons werden auf das JPanel hinzugefügt
 		menu.add(Start);
 		menu.add(regeln);
 		menu.add(exit);
-
-		w.setVisible(true);
+		
+		w.setVisible(true); // Das Fenster wird 
 
 	}
 

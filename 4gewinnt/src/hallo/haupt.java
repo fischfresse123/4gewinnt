@@ -6,8 +6,6 @@ public class haupt {
 	private FeldValue aktuellerSpieler;
 	private ArrayList<Feld> fields;
 
-	// public static haupt instance;
-
 	public static void main(String[] args) {
 		Controller menu = new Controller();
 	}
