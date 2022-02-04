@@ -7,7 +7,7 @@ public class haupt {
 	private ArrayList<Feld> fields;
 
 	public static void main(String[] args) {
-		Controller menu = new Controller();
+		Controller menu = new Controller(); // Das neue Fenster der Klasse Controller wird erstellt
 	}
 
 	public haupt() {

@@ -11,20 +11,24 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-public class Spielfeld extends JPanel implements MouseListener, ActionListener {
-	JButton reset = new JButton("Reset");
+public class Spielfeld extends JPanel implements MouseListener, ActionListener { // eine neue Klasse wird erstellt, die automatisch ein JPanel mit demselben Namen erstellt und ActionListener und MouseListener bedeuten, dass diese Klasse auf Buttons und Mausklicke hören kann
+	// Sieben neue Buttons werden erstellt, mit denen man eigentlich die einzelnen Reihen anwählen sollte, in die dann ein neuer Spielstein geworfen wird
+	JButton eins = new JButton("1"); 
 	JButton zwei = new JButton("2");
 	JButton drei = new JButton("3");
 	JButton vier = new JButton("4");
 	JButton fünf = new JButton("5");
 	JButton sechs = new JButton("6");
 	JButton sieben = new JButton("7");
-
+	
+	public static haupt instance; 
+	
 	public Spielfeld() {
-		// setLayoutManager(null);
-		reset.addActionListener(this);
+		eins.addActionListener(this);
 		zwei.setBounds(5, 5, 300, 500);
-		add(reset);
+		
+		// Die Buttons werden dem JPanel Spielfeld hinzugefügt
+		add(eins);
 		add(zwei);
 		add(drei);
 		add(vier);
@@ -32,15 +36,19 @@ public class Spielfeld extends JPanel implements MouseListener, ActionListener {
 		add(sechs);
 		add(sieben);
 
-		setBackground(Color.WHITE);
+		setBackground(Color.WHITE); // Das JPanel erhält die Hintergrundfarbe weiß
 		requestFocus();
-		addMouseListener(this);
-		setVisible(true);
+		addMouseListener(this); // der MouseListener wird dem JPanel hinzugefügt
+		setVisible(true); // Das JPanel ist nun zu sehen
 
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == eins) {
+			Spielfeld spielfeld = new Spielfeld(); // Wird ein neues JPanel Spielfeld erstellt
+			instance = new haupt();
+		}
 	}
 	
 

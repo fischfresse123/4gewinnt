@@ -4,14 +4,15 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
+// Siehe haupt
 
-public class Controller implements ActionListener {
-	JButton Start = new JButton("Start Game");
-	JButton regeln = new JButton("Regeln");
-	JButton exit = new JButton("Exit Game");
-	JFrame w = new JFrame();
+public class Controller implements ActionListener { // Das implements ActionListener dient dazu, dass Buttons gehört werden können
+	JButton Start = new JButton("Start Game"); // Der Button Start wird erstellt
+	JButton regeln = new JButton("Regeln"); // Der Button Regeln wird erstellt
+	JButton exit = new JButton("Exit Game"); // Der Button Exit wird erstellt
+	JFrame w = new JFrame(); // Ein neues Fenster wird erstellt
 	
-	public static haupt instance;
+	public static haupt instance; 
 	
 	Controller() {
 		//w.setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("viergewinnticon.png")));
@@ -49,22 +50,21 @@ public class Controller implements ActionListener {
 		menu.add(regeln);
 		menu.add(exit);
 		
-		w.setVisible(true); // Das Fenster wird 
+		w.setVisible(true); // Das Fenster wird sichtbar gemacht
 
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == Start) {
-			Spielfeld spielfeld = new Spielfeld();
-			instance = new haupt();
-		} else if (e.getSource() == regeln) {
-			JOptionPane.showMessageDialog(null,
+		if (e.getSource() == Start) { // Wenn der Button Start gedrückt wird dann
+			Spielfeld spielfeld = new Spielfeld(); // Wird ein neues JPanel Spielfeld erstellt
+			instance = new haupt(); // Wird auf haupt Z.14f zugegriffen, wo dann ein neues Fenster erstellt wird
+		} else if (e.getSource() == regeln) { // Wenn der Button Regeln gedrück wir dann
+			JOptionPane.showMessageDialog(null, // Wird ein Dialog angezeigt, in dem die Regeln stehen
 					"Jeder Spieler besitzt 21 gleichfarbige Spielsteine. Wenn ein Spieler einen Spielstein in eine Spalte fallen lässt, \n besetzt dieser den untersten freien Platz der Spalte. \n Gewinner ist der Spieler, der es als erster schafft, vier oder mehr seiner \n Spielsteine waagerecht, senkrecht oder diagonal in eine Linie zu bringen. Das Spiel endet unentschieden, \n wenn das Spielbrett komplett gefüllt ist, ohne dass ein Spieler eine Viererlinie gebildet hat.",
 					"Regeln", JOptionPane.INFORMATION_MESSAGE);
-			System.out.println("Hallo");
-		} else if (e.getSource() == exit) {
-			System.exit(0);
+		} else if (e.getSource() == exit) { // Wenn der Exit Button gedrückt wird dann
+			System.exit(0); // Beendet sich das Spiel
 
 		}
 	}
