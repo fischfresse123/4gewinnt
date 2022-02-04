@@ -16,110 +16,212 @@ public class haupt {
 	}
 
 	private void initGame() {
-		// Spiel Objekte
-		// Spieler
+
+		// Spieler der Anfängt
+
 		aktuellerSpieler = FeldValue.O;
+
 		// Felder
-		int fieldsMarginLeft = 17;
-		int fieldsMarginTop = 60;
-		int fieldsWidth = 750 / 7;
-		int fieldsHeight = 642 / 6;
+
+		int fieldsMarginLeft = 17; // Abstand der Felder zum linken Rand
+
+		int fieldsMarginTop = 60; // Abstand der Felder zum oberen Rand
+
+		int fieldsWidth = 750 / 7; // Breite des gesamten Spielfeldes geteilt durch Anzahl der Felder
+
+		int fieldsHeight = 642 / 6; // Höhe des gesamten Spielfeldes geteilt durch Anzahl der Felder
+
+		// Arrayliste in der alle Felder mit ihren Koordinaten gespeichert werden
 
 		fields = new ArrayList<Feld>();
+
 		fields.add(new Feld(fieldsMarginLeft + 0, fieldsMarginTop + 0, fieldsWidth, fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 1 * fieldsWidth, fieldsMarginTop + 0, fieldsWidth, fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 2 * fieldsWidth, fieldsMarginTop + 0, fieldsWidth, fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 3 * fieldsWidth, fieldsMarginTop + 0, fieldsWidth, fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 4 * fieldsWidth, fieldsMarginTop + 0, fieldsWidth, fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 5 * fieldsWidth, fieldsMarginTop + 0, fieldsWidth, fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 6 * fieldsWidth, fieldsMarginTop + 0, fieldsWidth, fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 0, fieldsMarginTop + 1 * fieldsHeight, fieldsWidth, fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 1 * fieldsWidth, fieldsMarginTop + 1 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 2 * fieldsWidth, fieldsMarginTop + 1 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 3 * fieldsWidth, fieldsMarginTop + 1 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 4 * fieldsWidth, fieldsMarginTop + 1 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 5 * fieldsWidth, fieldsMarginTop + 1 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 6 * fieldsWidth, fieldsMarginTop + 1 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 0, fieldsMarginTop + 2 * fieldsHeight, fieldsWidth, fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 1 * fieldsWidth, fieldsMarginTop + 2 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 2 * fieldsWidth, fieldsMarginTop + 2 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 3 * fieldsWidth, fieldsMarginTop + 2 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 4 * fieldsWidth, fieldsMarginTop + 2 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 5 * fieldsWidth, fieldsMarginTop + 2 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 6 * fieldsWidth, fieldsMarginTop + 2 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 0, fieldsMarginTop + 3 * fieldsHeight, fieldsWidth, fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 1 * fieldsWidth, fieldsMarginTop + 3 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 2 * fieldsWidth, fieldsMarginTop + 3 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 3 * fieldsWidth, fieldsMarginTop + 3 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 4 * fieldsWidth, fieldsMarginTop + 3 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 5 * fieldsWidth, fieldsMarginTop + 3 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 6 * fieldsWidth, fieldsMarginTop + 3 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 0, fieldsMarginTop + 4 * fieldsHeight, fieldsWidth, fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 1 * fieldsWidth, fieldsMarginTop + 4 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 2 * fieldsWidth, fieldsMarginTop + 4 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 3 * fieldsWidth, fieldsMarginTop + 4 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 4 * fieldsWidth, fieldsMarginTop + 4 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 5 * fieldsWidth, fieldsMarginTop + 4 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 6 * fieldsWidth, fieldsMarginTop + 4 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 0, fieldsMarginTop + 5 * fieldsHeight, fieldsWidth, fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 1 * fieldsWidth, fieldsMarginTop + 5 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 2 * fieldsWidth, fieldsMarginTop + 5 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 3 * fieldsWidth, fieldsMarginTop + 5 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 4 * fieldsWidth, fieldsMarginTop + 5 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 5 * fieldsWidth, fieldsMarginTop + 5 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
+
 		fields.add(new Feld(fieldsMarginLeft + 6 * fieldsWidth, fieldsMarginTop + 5 * fieldsHeight, fieldsWidth,
+
 				fieldsHeight));
 
 	}
+
+// Methode um den Spieler zu wechseln
 
 	public void nächsterSpieler() {
-		if (aktuellerSpieler == FeldValue.X) {
+
+		if (aktuellerSpieler == FeldValue.X) { // wenn X dran ist dann wechselt man beim ausführe der Methode zum
+												// Spieler O. Wenn X nicht dran ist wechselt man beim Ausführen zu X
+
 			aktuellerSpieler = FeldValue.O;
+
 		} else {
+
 			aktuellerSpieler = FeldValue.X;
+
 		}
+
 	}
 
+	// Methode um Abzufragen welcher Spieler gerade dran ist
+
 	public FeldValue getAktuellerSpieler() {
+
 		return aktuellerSpieler;
 
 	}
 
+// Methode um alle Felder in Arrayliste aufrufen zu können
+
 	public ArrayList<Feld> getFields() {
+
 		return fields;
+
 	}
 
+	public static haupt instance;
+
 	public boolean Gewonnen() {
+		boolean gewonnen = false;
+
 		int[][] FeldArray = new int[7][6];
+		// Feld.setValue(haupt.getAktuellerSpieler()); ein weiterer versuch zu wissen
+		// wer dran ist
 
 		FeldArray[0][0] = fields.get(0).getValue().getValue();
 		FeldArray[1][0] = fields.get(1).getValue().getValue();
@@ -163,5 +265,10 @@ public class haupt {
 		FeldArray[4][5] = fields.get(39).getValue().getValue();
 		FeldArray[5][5] = fields.get(40).getValue().getValue();
 		FeldArray[6][5] = fields.get(41).getValue().getValue();
+
+		// Hier sollte unfertig eingefügt werden
+		
+		return 1 == 1;
+
 	}
 }

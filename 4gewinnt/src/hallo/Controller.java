@@ -4,7 +4,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
-// Siehe haupt
+// Alle nötigen imports. Das * importiert alle imports einer Art
 
 public class Controller implements ActionListener { // Das implements ActionListener dient dazu, dass Buttons gehört werden können
 	JButton Start = new JButton("Start Game"); // Der Button Start wird erstellt
@@ -15,7 +15,7 @@ public class Controller implements ActionListener { // Das implements ActionList
 	public static haupt instance; 
 	
 	Controller() {
-		//w.setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("viergewinnticon.png")));
+		//w.setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("viergewinnticon.png")));// Hier wird das Bild in der oberen linken Ecke und auf der Taskleiste geändert (Quelle: https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/NYCS-bull-trans-4-red.svg/2048px-NYCS-bull-trans-4-red.svg.png)
 		w.setTitle("VIER GEWINNT"); // verändert den Titel des Fensters
 		w.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Wenn auf das rote Kreuz gedrückt wird, dann schließt sich das Fenster
 		w.setSize(800, 600); // Die Größe des Fensters wird auf 800x600 Pixel gesetzt
@@ -24,7 +24,7 @@ public class Controller implements ActionListener { // Das implements ActionList
 
 		JPanel menu = new JPanel(); // Ein neues JPanel wird erstellt, auf das dann die Buttons kommen
 		w.add(menu); // Das JPanel wird auf das Fenster hinzugefügt
-
+		
 		Start.setBackground(Color.BLUE); // Der Start-Button wird im Hintergrund blau
 		Start.setForeground(Color.WHITE); // Der Start-Button bekommt die Schriftfarbe weiß
 		Start.setFocusPainted(false); //

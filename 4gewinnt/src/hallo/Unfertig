@@ -1,0 +1,64 @@
+		if (aktuellerSpieler == FeldValue.1 && gewonnen == false) // Wenn Spieler 1 dran ist und noch nicht gewonnen wurde dann
+			for (int i = 0; i < 7; i++) {		// nimm alle Felder
+				for (int j = 0; j < 6; j++) {
+					if (Feldarray[i][j] == 1 && Feldarray[i + 1][j] == 1 && Feldarray[i + 2][j] == 1 && Feldarray[i + 3][j] == 1){ // und überprüfe ob das ausgewählte Feld und die drei rechts daneben = 1 sind
+						gewonnen = true; // Wenn ja dann setze gewonnen auf true
+				}
+			}
+			
+		 else if (aktuellerSpieler == FeldValue.1 && gewonnen == false) // Soll anschlagen wenn Spieler 1 dran ist
+			for (int i = 0; i < 7; i++) {
+				for (int j = 0; j < 6; j++) {
+					if (Feldarray[i][j] == 1 && Feldarray[i + 1][j + 1] == 1 && Feldarray[i + 2][j + 2] == 1 && Feldarray[i + 3][j + 3] == 1){
+						gewonnen = true;
+				}
+			}
+			
+		if (aktuellerSpieler == FeldValue.1 && gewonnen == false) // Soll anschlagen wenn Spieler 1 dran ist
+			for (int i = 0; i < 7; i++) {
+				for (int j = 0; j < 6; j++) {
+					if (Feldarray[i][j] == 1 && Feldarray[i + 1][j - 1] == 1 && Feldarray[i + 2][j - 2] == 1 && Feldarray[i + 3][j - 3] == 1){
+						gewonnen = true;
+				}
+			}			
+			
+		if (aktuellerSpieler == FeldValue.1 && gewonnen == false) // Soll anschlagen wenn Spieler 1 dran ist
+			for (int i = 0; i < 7; i++) {
+				for (int j = 0; j < 6; j++) {
+					if (Feldarray[i][j] == 1 && Feldarray[i][j + 1] == 1 && Feldarray[i][j + 2] == 1 && Feldarray[i][j + 3] == 1){
+						gewonnen = true;
+				}
+			}			
+			
+		if (aktuellerSpieler == FeldValue.2 && gewonnen == false) // Soll anschlagen wenn Spieler 2 dran ist
+			for (int i = 0; i < 7; i++) {
+				for (int j = 0; j < 6; j++) {
+					if (Feldarray[i][j] == 2 && Feldarray[i + 1][j] == 2 && Feldarray[i + 2][j] == 2 && Feldarray[i + 3][j]) == 2{
+						gewonnen = true;
+				}
+			}			
+			
+		if (aktuellerSpieler == FeldValue.2 && gewonnen == false) // Soll anschlagen wenn Spieler 2 dran ist
+			for (int i = 0; i < 7; i++) {
+				for (int j = 0; j < 6; j++) {
+					if (Feldarray[i][j] == 2 && Feldarray[i + 1][j + 1] == 2 && Feldarray[i + 2][j + 2] == 2 && Feldarray[i + 3][j + 3] == 2 ){
+						gewonnen = true;
+				}
+			}			
+			
+		if (aktuellerSpieler == FeldValue.2 && gewonnen == false) // Soll anschlagen wenn Spieler 2 dran ist
+			for (int i = 0; i < 7; i++) {
+				for (int j = 0; j < 6; j++) {
+					if (Feldarray[i][j] == 2 && Feldarray[i + 1][j - 1] == 2 && Feldarray[i + 2][j - 2] == 2 && Feldarray[i + 3][j - 3] == 2){
+						gewonnen = true;
+				}
+			}			
+			
+		if (aktuellerSpieler == FeldValue.2 && gewonnen == false) // Soll anschlagen wenn Spieler 2 dran ist
+			for (int i = 0; i < 7; i++) {
+				for (int j = 0; j < 6; j++) {
+					if (Feldarray[i][j] == 2 && Feldarray[i][j + 1] == 2 && Feldarray[i][j + 2] == 2 && Feldarray[i][j + 3] == 2){
+						gewonnen = true;
+				}
+			}		
+		

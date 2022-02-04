@@ -1,17 +1,25 @@
 package hallo;
 
-public enum FeldValue {
+public enum FeldValue { // Enum speichert die Variablen-Werte X, O, EMPTY und macht sie von überall
+						// zugreifbar
+
+	X(1), O(2), EMPTY(0); // Jede Möglichkeit nimmt eine Zahl an
+
 	
-	X(1), O(2), EMPTY(0);
+	
+	// Speicher- and Abfrage-Möglichkeit der Werte
+	int value;
 
-    int value;
+	private FeldValue(int Wert) {
 
-    private FeldValue(int Wert) {
-        value = Wert;
-    }
+		value = Wert;
 
+	}
 
-    int getValue() {
-        return value;
-    }
+	int getValue() {
+
+		return value;
+
+	}
+
 }

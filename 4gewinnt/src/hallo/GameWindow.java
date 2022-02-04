@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 public class GameWindow extends JFrame { // Durch das extends JFrame wird automatisch ein Fenster mit dem Namen der Klasse erstellt
 
 	public GameWindow(int width, int height) {
-		// setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("viergewinnticon.png"))); // Hier wird das Bild in der oberen linken Ecke und auf der Taskleiste geändert (Quelle: https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/NYCS-bull-trans-4-red.svg/2048px-NYCS-bull-trans-4-red.svg.png)
+		//setIconImage(Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("viergewinnticon.png"))); // Hier wird das Bild in der oberen linken Ecke und auf der Taskleiste geändert (Quelle: https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/NYCS-bull-trans-4-red.svg/2048px-NYCS-bull-trans-4-red.svg.png)
 		setTitle("VIER GEWINNT"); // Das neue Fenster bekommt den Titel 4Gewinnt
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE); // Wenn das rote Kreuz gedrückt wird, dann schließt sich nur dieses Fenster, man sieht aber wieder das Menu
 		setBounds(0, 0, width, height); // Falls man die Boundries ändern will, dann ist das hier der Platzhalter dafür
